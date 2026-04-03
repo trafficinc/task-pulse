@@ -1,9 +1,58 @@
-  # Task Pulse
+    # Task Pulse
 
   A local-first console task manager for software projects.
 
   Task Pulse gives each project its own task workspace, supports priorities, due dates, notes, bulk actions, overdue/upcoming views, heatmaps, imports from analysis tools,
   Git-based task creation, and portable JSON/CSV export for team sharing. Note: this is experimental and there may still be bugs that need to be worked out until it is stable.
+
+    Local-first project task CLI
+
+   ┌───────────────────────────────────────────────────────────────┐
+   │ Capture                                                       │
+   │   task add "Refactor auth middleware" --tag backend           │
+   │   task note 12 "Need QA pass before release"                  │
+   │   task import-git-todos                                       │
+   │   task import-coverage coverage.xml                           │
+   └───────────────────────────────────────────────────────────────┘
+
+   ┌───────────────────────────────────────────────────────────────┐
+   │ Organize                                                      │
+   │   task list --query billing                                   │
+   │   task overdue                                                │
+   │   task upcoming --days 14                                     │
+   │   task show 12                                                │
+   └───────────────────────────────────────────────────────────────┘
+
+   ┌───────────────────────────────────────────────────────────────┐
+   │ Act                                                           │
+   │   task start 12                                               │
+   │   task done 12 13 14                                          │
+   │   task close 9                                                │
+   │   task reopen 9                                               │
+   └───────────────────────────────────────────────────────────────┘
+
+   ┌───────────────────────────────────────────────────────────────┐
+   │ Share                                                         │
+   │   task export shared/tasks.json                               │
+   │   task import shared/tasks.json                               │
+   │   git add shared/tasks.json                                   │
+   └───────────────────────────────────────────────────────────────┘
+
+   ┌───────────────────────────────────────────────────────────────┐
+   │ See the work                                                  │
+   │                                                               │
+   │   Jan      Feb      Mar      Apr                              │
+   │   Mon                ░░                                       │
+   │   Tue      ▒▒        ░░                                       │
+   │   Wed                ▓▓                                       │
+   │   Thu                          ▒▒                             │
+   │   Fri      ██                  ██                             │
+   │   Sat                                                         │
+   │   Sun                ░░                                       │
+   │                                                               │
+   │   task heatmap                                                │
+   └───────────────────────────────────────────────────────────────┘
+
 
   ## Features
 
