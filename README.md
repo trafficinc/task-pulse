@@ -5,6 +5,7 @@
   Task Pulse gives each project its own task workspace, supports priorities, due dates, notes, bulk actions, overdue/upcoming views, heatmaps, imports from analysis tools,
   Git-based task creation, and portable JSON/CSV export for team sharing. Note: this is experimental and there may still be bugs that need to be worked out until it is stable.
 
+<img src="task-pulse.png" alt="Alt text" width="500">
 
   ## Features
 
