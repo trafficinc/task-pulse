@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tasks-cli-local"
+version = "0.1.0"
+description = "Git-like local task CLI"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "typer>=0.12",
+  "rich>=13.0",
+]
+
+[tool.setuptools]
+packages = ["tasks", "tasks.storage", "tasks.utils"]
+
+[project.scripts]
+task = "tasks.main:app"
