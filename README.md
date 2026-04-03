@@ -65,7 +65,7 @@
 
   ## Quick Start
 
-  Initialize task storage in the current project:
+  Initialize task pulse in the root project directory of the project you want to keep track of tasks on (ex. where .git is located):
 
   task init
 
