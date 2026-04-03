@@ -36,57 +36,59 @@
   ```bash
   git clone https://github.com/trafficinc/task-pulse.git
   cd task-pulse
+  ```
 
   ### 2. Create a virtual environment
 
   macOS / Linux:
-
+```bash
   python3 -m venv .venv
   source .venv/bin/activate
+```
 
   Windows PowerShell:
-
+```bash
   py -3 -m venv .venv
   .venv\Scripts\Activate.ps1
-
+```
   ### 3. Install the CLI
 
   Editable install:
-
+```bash
   python -m pip install -e .
-
+```
   Or install dependencies only:
-
+```bash
   python -m pip install -r requirements.txt
-
+```
   ### 4. Verify installation
-
+```bash
   task help
-
+```
   ## Quick Start
 
   Initialize task pulse in the root project directory of the project you want to keep track of tasks on (ex. where .git is located):
-
+```bash
   task init
-
+```
   Add some tasks:
-
+```bash
   task add "Refactor auth middleware" --impact 5 --risk 4 --tag backend
   task add "Ship billing fix" --due-date 2026-04-15 --tag billing
   task list
-
+```
   ## Common Commands
 
   ### Add and list
-
+```bash
   task add "Fix login bug" --impact 5 --risk 4 --tag auth
   task list
   task list --status not_started
   task list --tag backend
   task list --query billing
-
+```
   ### Workflow
-
+```bash
   task show 1
   task open 1
   task note 1 "Need to confirm edge cases before merge"
@@ -99,72 +101,72 @@
   task reopen 2
   task edit 1 --due-date 2026-04-20
   task edit 1 --clear-due-date
-
+```
   ### Due dates
-
+```bash
   task overdue
   task overdue --tag backend
   task upcoming
   task upcoming --days 14
   task upcoming --query auth
-
+```
   ### Heatmap
-
+```bash
   task heatmap
   task heatmap --mode due
   task heatmap --tag backend
   task heatmap --query billing
-
+```
   ## Imports
 
   ### Larastan / PHPStan
-
+```bash
   task import-larastan larastan.json
-
+```
   ### PHPUnit coverage
-
+```bash
   task import-coverage coverage.xml
-
+```
   ### Git-based imports
 
   Import TODO / FIXME comments from tracked files:
-
+```bash
   task import-git-todos
   task import-git-todos --pattern "TODO|FIXME|HACK"
-
+```
   Import recent commits as review tasks:
-
+```bash
   task import-git-commits
   task import-git-commits --count 20
-
+```
   Import changed files from git status:
-
+```bash
   task import-git-changes
-
+```
   Import a task from the current branch name:
-
+```bash
   task import-git-branch
-
+```
   ## Export and Import Tasks
 
   Use portable exports to share tasks across machines or commit them to Git.
 
   ### Export to JSON
-
+```bash
   task export shared/tasks.json
-
+```
   ### Export to CSV
-
+```bash
   task export shared/tasks.csv
-
+```
   ### Import from JSON
-
+```bash
   task import shared/tasks.json
-
+```
   ### Import from CSV
-
+```bash
   task import shared/tasks.csv
-
+```
   JSON is the better format if you want to preserve notes cleanly in Git.
 
   ## Team Workflow
@@ -176,14 +178,14 @@
       - shared/tasks.json
 
   Typical team flow:
-
+```bash
   task init
   task import shared/tasks.json
-
+```
   After making changes to tasks, refresh the shared export:
-
+```bash
   task export shared/tasks.json
-
+```
   Then commit the updated shared task file.
 
   ## Notes
@@ -196,11 +198,12 @@
   ## Help
 
   General help:
-
+```bash
   task help
-
+```
   Single-command help:
-
+```bash
   task help add
   task help heatmap
   task help import-git-todos
+```
